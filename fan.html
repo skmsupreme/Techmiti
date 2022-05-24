@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+
+    <link rel="stylesheet" type="text/css" href="css/fan.css" />
+  </head>
+  <body>
+    <div class="fan">
+      <div class="image">
+        <img id="first" src="fan.png" />
+        <div class="base1"></div>
+        <div class="base2">
+          <div class="button">
+            <button onclick="ont()" class="on" id="on">ON</button>
+            <button onclick="offs()" class="off" id="off">OFF</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    
+      var on = document.getElementById("on");
+      var off = document.getElementById("off");
+      function ont(){
+        var fan = document.getElementById("first");
+        
+        fan.style.animationName="animate";
+        fan.style.animationTimingFunction="ease-in";
+        on.style.backgroundColor="green"
+        off.style.backgroundColor="black";
+
+
+         
+
+
+      }
+      function offs() {
+
+        var fan = document.getElementById("first");
+        
+        fan.style.animationTimingFunction="ease-out";
+        fan.style.animationName="none";
+        off.style.backgroundColor="red";
+        on.style.backgroundColor="black";
+       
+
+
+
+
+      }
+    </script>
+  </body>
+</html>
